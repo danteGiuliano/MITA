@@ -1,16 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title class="ion-text-center">Nombre y Apellido</ion-title>
+  <ion-toolbar class="ion-no-margin"  >
+    <ion-title class="ion-text-left">Nombre y Apellido</ion-title>
+
+    <ion-button slot="end" color="never">
+      <ion-icon slot="icon-only"  name="share-social-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button slot="end" color="never">
+      <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding background">
   <!--header , acerca e img -->
   <ion-grid fixed>
     <ion-row>
       <ion-col size="6">
-        <h3>Titulo</h3>
-        <h6>nacionalidad</h6>
+        <div class="background">
+          <h3>Titulo</h3>
+          <h6>nacionalidad</h6>
+        </div>
       </ion-col>
       <ion-col size="6">
         <img class="img-perfil" src="../../../assets/images-develop/perfil.jpg">
@@ -21,16 +32,35 @@
 
   <ion-card>
     <ion-card-content>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Aspernatur nesciunt modi expedita. Ut pariatur, porro 
-      ipsa suscipit sapiente ipsam, sint amet dicta inventore 
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Aspernatur nesciunt modi expedita. Ut pariatur, porro
+      ipsa suscipit sapiente ipsam, sint amet dicta inventore
       atque ad aliquid asperiores fuga itaque. In!
     </ion-card-content>
   </ion-card>
+
+  <div class="selection">
+    <ion-button (click)="target('experiencia')" [color]=focus.experiencia.color>
+      <ion-icon  slot="start" name="attach"></ion-icon>
+      Experiencias
+    </ion-button>
+    <ion-button (click)="target('estudio')" [color]=focus.estudio.color>
+      <ion-icon slot="start" name="school"></ion-icon>
+      Estudios
+    </ion-button>
+    <ion-button (click)="target('contacto')" [color]=focus.contacto.color >
+      <ion-icon slot="start" name="at"></ion-icon>
+      Contacto
+    </ion-button>
   
-  <app-experiencia></app-experiencia>
+  </div>
+ 
+  <app-experiencia *ngIf=focus.experiencia.estado></app-experiencia>
+  <app-estudio *ngIf=focus.estudio.estado></app-estudio>
+  <app-contacto *ngIf=focus.contacto.estado></app-contacto>
 
 </ion-content>
+
 <ion-footer>
   <ion-toolbar>
     <ion-title>Logear</ion-title>

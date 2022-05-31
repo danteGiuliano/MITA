@@ -1,32 +1,26 @@
 <body class="ion-padding">
 
   <div class="ion-padding" class="main">
-    <ion-grid fixed>
-      <ion-row class="ion-no-padding">
-        <ion-col size="9">
-          <ion-input type="text" placeholder="codigo perfil "></ion-input>
-        </ion-col>
-        <ion-col size="2">
-          <ion-button  fill="clear">
-            Buscar
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
+   
+    <div>
+      <ion-item> <ion-input class="buscador" type="text" placeholder="Buscar codigo"></ion-input>
+        <ion-label><ion-fab-button color="none">
+          <ion-icon name="search"></ion-icon>
+        </ion-fab-button></ion-label>
+      </ion-item>
+    </div>
+    <br>
     <div class="center">
       <ion-fab-button>
         <img src="../../assets/icon/qr.svg" alt="" srcset="">
       </ion-fab-button>
     </div>
-
-
     <br>
-    <ion-button [routerLink]="['/perfil']" fill="outline" expand="full" color="secondary">
+    <ion-button [routerLink]="['/perfil']" fill="outline" expand="block" color="secondary">
       logear
     </ion-button>
 
-    <ion-button  fill="outline" expand="full">
+    <ion-button  fill="outline" expand="block">
       registrarse
     </ion-button>
 

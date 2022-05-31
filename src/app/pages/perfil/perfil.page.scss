@@ -1,3 +1,16 @@
 .img-perfil{
     border-radius: 1em;
 }
+ion-content.background{
+    --background: url(../../../assets/fonde/perfil-1.svg);   
+}
+div.background{
+    text-align: center  ;
+    padding:2%;
+    border-radius: 1em;
+    background-color:rgba($color: #000000, $alpha: 0.8);
+}
+.selection{
+   display: flex;
+   justify-content: space-around;
+}

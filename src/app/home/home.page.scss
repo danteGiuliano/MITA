@@ -9,7 +9,12 @@ color: transparent;
 }
 .center{
   display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  justify-content:center;
+  margin-right:5%;
+  margin-left: 5%;
+}
+.buscador{
+  background-color: brown;
+  --padding-start:10px;
+  border-radius: 1em;
 }
