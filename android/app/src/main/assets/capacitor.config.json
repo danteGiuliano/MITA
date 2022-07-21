@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "MITA",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
