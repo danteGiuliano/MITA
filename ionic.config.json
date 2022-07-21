@@ -1,5 +1,7 @@
 {
   "name": "MITA",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
