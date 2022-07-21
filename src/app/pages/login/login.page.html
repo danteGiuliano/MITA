@@ -1,0 +1,48 @@
+<ion-content class="background ion-padding">
+
+  <div class="title">
+    <h1>Registro</h1>
+  </div>
+  <ion-list class="box">
+
+    <div class="row">
+      <form [formGroup]="registro" class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" formControlName="email_usuario">
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input id="email_verificado" type="email" class="validate" formControlName="email_verificado_usuario">
+            <label for="email">repita su email</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate" formControlName="password_usuario">
+            <label for="password">password</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input id="password_verificado" type="password" class="validate" formControlName="password_verificado_usuario">
+            <label for="password">repita su password</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <hr>
+
+   
+    <ion-button (click)="registrarse()" expand="block" shape="round">
+      Registrarse
+    </ion-button>
+    <hr>
+    <ion-button (click)="iniciar_sesion()" expand="block" shape="round">
+      Iniciar sesion
+    </ion-button>
+ 
+  </ion-list>
+
+  
+</ion-content>
