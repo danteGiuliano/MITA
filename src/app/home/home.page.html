@@ -2,13 +2,12 @@
 
   <div class="ion-padding" class="main">
    
-    <div>
+
       <ion-item> <ion-input class="buscador" type="text" placeholder="Buscar codigo"></ion-input>
         <ion-label><ion-fab-button color="none">
           <ion-icon name="search"></ion-icon>
         </ion-fab-button></ion-label>
       </ion-item>
-    </div>
     <br>
     <div class="center">
       <ion-fab-button (click)="scan()">
@@ -16,11 +15,11 @@
       </ion-fab-button>
     </div>
     <br>
-    <ion-button [routerLink]="['/perfil']" fill="outline" expand="block" color="secondary">
+    <ion-button [routerLink]="['/perfil']"  expand="block" color="success">
       logear
     </ion-button>
  <!--Mandar a servicio-->
-    <ion-button [routerLink]="['/login']"  fill="outline" expand="block">
+    <ion-button [routerLink]="['/login']"   expand="block">
       registrarse
     </ion-button>
 

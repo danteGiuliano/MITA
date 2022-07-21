@@ -14,11 +14,12 @@ color: transparent;
   margin-left: 5%;
 }
 .buscador{
-  background-color: brown;
+  background-color:transparent;
   --padding-start:10px;
+}
+ion-item{
   border-radius: 1em;
 }
-
 
 ion-content{
   --background: url(../../assets/fonde/perfil-1.svg);   
