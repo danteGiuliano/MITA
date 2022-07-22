@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginPage implements OnInit {
    });
 
 
-  constructor(private toast_registro:ToastController) { }
+  constructor(private toast_registro:ToastController,private navigate:Router) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,7 @@ export class LoginPage implements OnInit {
   iniciar_sesion(){}
 
   async presentToastWithOptions() {
+  
     const toast = await this.toast_registro.create({
       header: 'MITA',
       message: 'Bienvenido <3',
@@ -38,7 +40,7 @@ export class LoginPage implements OnInit {
     });
     await toast.present();
     setTimeout(() => {
-      
+      this.navigate.navigateByUrl('')
     }, 2000);
 
   }

@@ -1,0 +1,30 @@
+<ion-modal #modal trigger="open-modal">
+  <ng-template>
+
+    <ion-content>
+      <ion-toolbar>
+        <ion-title>Inicio de sesion</ion-title>
+      </ion-toolbar>
+
+      <div class="row" class="ion-padding">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input id="email_verificado" type="password" class="validate">
+            <label for="email">password</label>
+          </div>
+        </div>
+        
+              <ion-button (click)="onClick()" expand="block" fill="outline">
+                Iniciar sesion
+              </ion-button>
+      </div>
+
+    </ion-content>
+
+  </ng-template>
+</ion-modal>

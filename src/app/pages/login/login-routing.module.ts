@@ -7,6 +7,9 @@ const routes: Routes = [
   {
     path: '',
     component: LoginPage
+  },{
+    path: 'login-data',
+    loadChildren: () => import('../../pages/login-data/login-data.module').then( m => m.LoginDataPageModule)
   }
 ];
 
